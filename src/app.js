@@ -24,6 +24,8 @@ app.use(express.json());
 
 app.use(cors());
 
+app.use(express.static("public"));
+
 function formatarData(data) {
   return new Date(data).toLocaleString("pt-BR", {
     timeZone: "America/Bahia",
@@ -181,26 +183,34 @@ app.patch("/usuarios/reset-senha", async (req, res) => {
 // Rota de teste para verificar se o servidor tá rodando
 app.get("/", (req, res) => {
   res.send(`
-    <h1 align="center">🚀 API Orkut - Rede Social Backend</h1>
-    
-    <p>
-      API REST desenvolvida com Node.js, Express e PostgreSQL, simulando as principais funcionalidades de uma rede social.
-    </p>
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+      <meta charset="UTF-8">
+      <title>API Orkut</title>
+      <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+      <div class="container">
+        <h1>🚀 API Orkut - Rede Social Backend</h1>
 
-    <p>
-      🔗 <strong>Endpoints disponíveis:</strong><br><br>
-      
-      👤 Usuários: 
-      <a href="https://projetoapi-orkut-p1dn.onrender.com/usuarios" target="_blank">
-        /usuarios
-      </a>
-      <br><br>
+        <p>
+          API REST desenvolvida com Node.js, Express e PostgreSQL,
+          simulando uma rede social completa com autenticação JWT,
+          CRUD de usuários e postagens.
+        </p>
 
-      📝 Postagens: 
-      <a href="https://projetoapi-orkut-p1dn.onrender.com/posts" target="_blank">
-        /posts
-      </a>
-    </p>
+        <div class="links">
+          <a href="/usuarios" target="_blank">👤 Ver Usuários</a>
+          <a href="/posts" target="_blank">📝 Ver Postagens</a>
+        </div>
+
+        <div class="footer">
+          <p>🔐 Autenticação JWT | 🗄️ PostgreSQL | ⚡ Node.js</p>
+        </div>
+      </div>
+    </body>
+    </html>
   `);
 });
 
