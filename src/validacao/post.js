@@ -23,7 +23,8 @@ const postSchema = Joi.object({
  function validarPost(req, res, next) {
     const {error} = postSchema.validate(req.body, {abortEarly: false}) // abortEarly: false é importante pois já trás todos os erros, ao invés de 1 por vez. 
 
-    if(error) {        
+    if(error) {       
+       console.log(error); 
         return res.status(400).json ({
             erro: error.details.map(e => e.message)
         })        

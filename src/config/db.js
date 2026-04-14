@@ -1,9 +1,10 @@
-// Criar conexão com pool para se cominicar ao banco de dados
-const {Pool} = require('pg')
+const { Pool } = require("pg");
+
+const isProduction = process.env.NODE_ENV === "production";
 
 module.exports = new Pool({
-    connectionString:process.env.DATABASE_URL,
-    ssl: {
-        rejectUnauthorized: false
-    }       
-})
+  connectionString: process.env.DATABASE_URL,
+  ssl: isProduction
+    ? { rejectUnauthorized: false }
+    : false,
+});
