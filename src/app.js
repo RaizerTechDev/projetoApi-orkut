@@ -187,7 +187,11 @@ app.get("/", (req, res) => {
     <html lang="pt-BR">
     <head>
       <meta charset="UTF-8">
+      
       <title>API Orkut</title>
+
+      <link rel="icon" type="image/png" href="/favicon.png" />    
+    
       <link rel="stylesheet" href="/css/style.css">
     </head>
     <body>
