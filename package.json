@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "concurrently \"npm run dev\" \"npm run sass:watch\"",
     "dev": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass:watch": "sass --watch public/scss/styles.scss public/css/style.css"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +24,7 @@
     "pg": "^8.20.0"
   },
   "devDependencies": {
+    "concurrently": "^9.2.1",
     "nodemon": "^3.1.14",
     "sass": "^1.99.0"
   }
