@@ -209,11 +209,20 @@ app.get("/", (req, res) => {
           <a href="/posts" target="_blank">📝 Ver Postagens</a>
         </div>
 
-        <div class="footer">
-          <p>🔐 Autenticação JWT | 🗄️ PostgreSQL | ⚡ Node.js</p>
-        </div>
-      </div>
+       <div class="techs">
+  <h4>
+    🔐 <a href="https://jwt.io/" target="_blank">JWT</a> |
+    🗄️ <a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a> |
+    ⚡ <a href="https://nodejs.org/" target="_blank">Node.js</a>
+  </h4>
+</div>
+      </div>  
+
+       <fotter class="footer">
+        <p>Desenvolvido por Rafael Raizer - 2026</p>
+      </fotter>
     </body>
+       
     </html>
   `);
 });
