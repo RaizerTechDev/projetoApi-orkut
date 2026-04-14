@@ -55,7 +55,6 @@ O projeto simula funcionalidades essenciais de uma rede social, incluindo autent
 |--------|--------------------------|----------------------------------------|--------------|
 | POST   | /usuarios                | Criação de usuário                     | ❌           |
 | POST   | /login                   | Autenticação e geração de token JWT    | ❌           |
-|
 | GET    | /                        | Health check da API                    | ❌           |
 | GET    | /usuarios                | Listagem de usuários                   | ❌           |
 | GET    | /posts                   | Listagem de posts                      | ❌           |
