@@ -43,6 +43,13 @@ O projeto simula funcionalidades essenciais de uma rede social, incluindo autent
 
 ---
 
+## 🚀 Como consumir a API
+
+**Base URL:**
+https://projetoapi-orkut-p1dn.onrender.com
+
+---
+
 ## 📚 Documentação da API
 
 **🔗 [Acessar documentação completa no Postman](https://documenter.getpostman.com/view/19569624/2sBXqCNNu3/)**
@@ -109,7 +116,7 @@ Criar post (rota protegida)
 
 ## 📤 Resposta
 
-*Sucesso ao criar usuário (201)*
+*Usuário criado (201)*
 ```
 {
   "mensagem": "Usuário criado com sucesso",
@@ -120,14 +127,14 @@ Criar post (rota protegida)
 }
   ```
 
-*Sucesso no login*
+*Login realizado*
 ```
 {
   "token": "jwt_token_aqui"
 }
 ```
 
-*Post criado com sucesso*
+*Post criado*
 ```
 {
   "mensagem": "Post criado com sucesso",
@@ -138,6 +145,7 @@ Criar post (rota protegida)
      "usuario_id": 2    
   } 
 }
+
 ```
 
 ## ⚙️ Como Executar Localmente
@@ -154,7 +162,7 @@ cd projetoApi-orkut
 
 ### Instale as dependências
 ```
-nnpm install express dotenv cors jsonwebtoken bcrypt
+npm install express dotenv cors jsonwebtoken bcrypt
 npm install nodemon --save-dev
 
 ```
