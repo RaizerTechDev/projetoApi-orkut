@@ -6,6 +6,8 @@ API RESTful inspirada na clássica rede social **Orkut**, desenvolvida com foco 
 
 O projeto simula funcionalidades essenciais de uma rede social, incluindo autenticação, gerenciamento de usuários e publicações, utilizando **Node.js**, **Express** e **PostgreSQL**.
 
+Projeto desenvolvido como do *curso VNW (Vai Na Web)* com orientação dos mestres *Jeferson Santos e Vinicius Bispo.*
+
 ---
 
 ## 🛠️ Tecnologias Utilizadas
